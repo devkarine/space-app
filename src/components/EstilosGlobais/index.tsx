@@ -23,6 +23,10 @@ hr {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
+}
+ul{
+  list-style: none;
 }
 abbr[title] {
   border-bottom: none; 

@@ -22,7 +22,7 @@ export const Cabecalho = () => {
   return (
     <ContainerCabecalho>
       <HeaderEstilizado>
-        <img src="public/imagens/logo.png" alt="logo" />
+        <img src="/imagens/logo.png" alt="logo" />
       </HeaderEstilizado>
 
       <CampoTexto/>
