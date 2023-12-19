@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import BannerImg from "../../assets/banner.png";
 
 const BannerEsttilizado = styled.div`
-  background-image: url(src/assets/banner.png);
+  background-image: url(${BannerImg});
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
