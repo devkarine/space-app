@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 const InputContent = styled.div`
   border: 2px solid  #c98cf1;
   border-radius: 10px;
-  height: 56px;
+  max-height: 30px;
   width: 566px;
   padding: 12px 16px;
   display: flex;

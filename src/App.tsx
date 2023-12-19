@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 import { EstilosGlobais } from "./components/EstilosGlobais";
 import { Cabecalho } from "./components/Cabecalho";
 import { BarraLateral } from "./components/BarraLateral";
+import { Banner } from "./components/Banner";
 
 const FundoGradiente = styled.div`
   background: var(
@@ -12,10 +13,19 @@ const FundoGradiente = styled.div`
   min-height: 100vh;
 `;
 
+const ContainerHero = styled.div`
+  display: flex;
+  gap: 22px;
+`
+
 export const App = () => {
   return <FundoGradiente>
     <EstilosGlobais/>
     <Cabecalho/>
-    <BarraLateral/>
+    <ContainerHero>
+      <BarraLateral/>
+      <Banner/>
+    </ContainerHero>
+    
   </FundoGradiente>;
 };
