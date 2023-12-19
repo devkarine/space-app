@@ -1,8 +1,8 @@
 import { styled } from "styled-components";
-
+import Banner from "../../assets/banner.png";
 
 const InputContent = styled.div`
-  border: 2px solid  #c98cf1;
+  border: 2px solid #c98cf1;
   border-radius: 10px;
   max-height: 30px;
   width: 566px;
@@ -28,7 +28,7 @@ export const CampoTexto = () => {
   return (
     <InputContent>
       <input type="text" placeholder="O que você procura?" />
-      <img src="public/icones/search.svg" alt="lupa" />
+      <img src={Banner} alt="lupa" />
     </InputContent>
   );
 };
