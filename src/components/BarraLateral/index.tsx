@@ -29,23 +29,23 @@ export const BarraLateral = () => {
 
           <ItemNavegacao
             iconeAtivo="/icones/mais-curtidas-ativo.png"
-            iconeInativo="public/icones/mais-curtidas-inativo.png"
+            iconeInativo="/icones/mais-curtidas-inativo.png"
             ativo={false}
           >
             Mais Curtidas
           </ItemNavegacao>
 
           <ItemNavegacao
-            iconeAtivo="public/icones/novas-ativo.png"
-            iconeInativo="public/icones/novas-inativo.png"
+            iconeAtivo="/icones/novas-ativo.png"
+            iconeInativo="/icones/novas-inativo.png"
             ativo={false}
           >
             Novas
           </ItemNavegacao>
 
           <ItemNavegacao
-            iconeAtivo="public/icones/surpreenda-me-ativo.png"
-            iconeInativo="public/icones/surpreenda-me-inativo.png"
+            iconeAtivo="/icones/surpreenda-me-ativo.png"
+            iconeInativo="/icones/surpreenda-me-inativo.png"
             ativo={false}
           >
             Surpreenda-me
