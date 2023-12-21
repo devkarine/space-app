@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { Tags } from "./Tags";
+import { Populares } from "./Populares";
 
-const ContentGaleria = styled.section`
+const ContentGaleria = styled.div`
   display: flex;
   gap: 24px;
 
@@ -11,19 +13,32 @@ const ContentGaleria = styled.section`
   }
 `;
 
-const GaleriaEstilizada = styled.section``;
+const GaleriaEstilizada = styled.section`
+  flex-grow: 1;
+`;
 
-const Populares = styled.section``;
+const PopularesEstilizado = styled.section`
+    text-align: center;
+`;
 
 export const Galeria = () => {
   return (
-    <ContentGaleria>
-      <GaleriaEstilizada>
-        <h2>Navegue pela galeria</h2>
-      </GaleriaEstilizada>
-      <Populares>
-        <h2>Populares</h2>
-      </Populares>
-    </ContentGaleria>
+    <>
+      <Tags />
+
+      <ContentGaleria>
+
+        <GaleriaEstilizada>
+          <h2>Navegue pela galeria</h2>
+
+        </GaleriaEstilizada>
+
+        <PopularesEstilizado>
+          <h2>Populares</h2>
+          <Populares/>
+        </PopularesEstilizado>
+
+      </ContentGaleria>
+    </>
   );
 };
