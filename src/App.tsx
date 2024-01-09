@@ -4,12 +4,18 @@ import { Cabecalho } from "./components/Cabecalho";
 import { BarraLateral } from "./components/BarraLateral";
 import { Banner } from "./components/Banner";
 import { Galeria } from "./components/Galeria";
+import fotos from "./fotos.json";
+import { useState } from "react";
+import { DialogZoom } from "./components/ModalZoom";
 
 const FundoGradiente = styled.div`
-  background: var(
-    --Gradiente-fundo,
-    linear-gradient(175deg, #041833 4.16%, #04244f 48%, #154580 96.76%)
+  background-image: linear-gradient(
+    175deg,
+    #041833 4.16%,
+    #04244f 48%,
+    #154580 96.76%
   );
+
   width: 100%;
   min-height: 100vh;
 `;
@@ -31,7 +37,16 @@ const ConteudoGaleria = styled.section`
   flex-grow: 1;
 `;
 
+export interface FotoProps {
+  titulo: string;
+  fonte: string;
+  path: string;
+  id: number;
+  tagId: number;
+}
+
 export const App = () => {
+  const [fotosDaGaleria, setFotosDaGaleria] = useState<FotoProps[]>(fotos);
   return (
     <FundoGradiente>
       <EstilosGlobais />
@@ -41,9 +56,10 @@ export const App = () => {
           <BarraLateral />
           <ConteudoGaleria>
             <Banner />
-            <Galeria />
+            <Galeria fotos={fotosDaGaleria} />
           </ConteudoGaleria>
         </MainContainer>
+        <DialogZoom />
       </AppContainer>
     </FundoGradiente>
   );
